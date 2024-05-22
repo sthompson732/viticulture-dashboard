@@ -51,7 +51,7 @@ const App: React.FC = () => {
       selectedCategory: '',
     },
     satellite: {
-      intensity: 100,
+      intensity: 10,
       threshold: 5,
       opacity: 0.7,
       color: [255, 255, 255, 255],
@@ -139,8 +139,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <Box>
-      <Header logoSrc="Logo here" userName="User Name" userRole="User Role" currentDate={new Date().toISOString()} />
+    <div>
+      <Header logoSrc="../assets/images/eviden-logo.png" userName="Shannon Thompson" userRole="Admin" currentDate={new Date().toISOString()} />
       <Box display="flex">
         <Box>
           <IconButton onClick={togglePanel} style={{ position: 'absolute', top: 160, left: 10, zIndex: 1000 }}>
@@ -152,21 +152,24 @@ const App: React.FC = () => {
         </Box>
         <Box flexGrow={1}>
           <GoogleMapComponent mapOptions={mapOptions} apiKey="x">
-            {(map) => (
-              <LayerComponent
-                map={map}
-                layers={layers}
-                layerStyles={layerStyles}
-                setTooltip={setTooltip}
-                setTooltipPosition={setTooltipPosition}
-              />
-            )}
+            {(map) => 
+              map && (
+                <LayerComponent
+                  map={map}
+                  layers={layers}
+                  layerStyles={layerStyles}
+                  setTooltip={setTooltip}
+                  setTooltipPosition={setTooltipPosition}
+                />
+              )
+            }
           </GoogleMapComponent>
+          <TooltipComponent tooltip={tooltip} x={tooltipPosition.x} y={tooltipPosition.y} />
         </Box>
       </Box>
       <TooltipComponent tooltip={tooltip} x={tooltipPosition.x} y={tooltipPosition.y} />
       <Footer />
-    </Box>
+    </div>
   );
 };
 

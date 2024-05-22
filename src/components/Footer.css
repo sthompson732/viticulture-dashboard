@@ -5,7 +5,7 @@
     height: 30px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding-right: 100px;
+    margin-right: 100px;
     display: flex;
     align-items: right;
     justify-content: right;
