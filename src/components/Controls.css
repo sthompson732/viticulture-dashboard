@@ -1,0 +1,95 @@
+.controls-panel {
+    background-color: rgba(40, 40, 40, 0.95);
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    max-width: 300px;
+    position: relative;
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: calc(100vh - 64px);
+    /* Subtract the height of the AppBar */
+}
+
+.layer-control {
+    margin-bottom: 10px;
+}
+
+.layer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+.layer-header label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.layer-header .collapse-icon {
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.layer-options {
+    padding: 5px 10px;
+}
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+.control-group label {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.control-group .icon {
+    margin-right: 5px;
+}
+
+.slider {
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 5px;
+}
+
+.sketch-picker {
+    width: 100% !important;
+}
+
+.sketch-picker>div {
+    width: 100% !important;
+}
+
+.sketch-picker .flexbox-fix {
+    flex-wrap: wrap;
+}
+
+.sketch-picker input {
+    width: 100% !important;
+    padding: 5px !important;
+    font-size: 0.8rem;
+}
+
+.select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
